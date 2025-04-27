@@ -13,6 +13,13 @@ function getList(){
     })
     .then(data => {
         console.log(data);
+        if(data.length > 0){
+            data.forEach(job => {
+                let liEl = document.createElement("li");
+                liEl.textContent = `Företag: ${job.companyname}, Jobbtitel: ${job.jobtitle}, Plats: ${job.location};`;
+                jobList.appendChild(liEl);
+            });
+        }
     })
     .catch(error => {
         console.error("Fel vid hämtning av alla jobb: " + error);
