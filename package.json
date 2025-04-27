@@ -1,7 +1,7 @@
 {
   "name": "backend2.2-vera",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -13,6 +13,7 @@
     "nodemon": "^3.1.10"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   }
 }
