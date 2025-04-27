@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add</title>
+    <title>Lägg till</title>
 </head>
 <body>
-    <h1>Add</h1>
+    <header>
+        <h1>Lägg till</h1>
+        <nav>
+            <a href="index.html">Startsida</a>
+            <a href="add.html">Lägg till</a>
+            <a href="about.html">Om</a>
+        </nav>
+        </header>
+        <section id="all-form">
+            <form id="form">
+                <label for="companyname">Företag:</label>
+                <input type="text" id="companyname" name="companyname" value="Skriv in företagets namn" required>
+
+                <label for="jobtitle">Jobbtitel:</label>
+                <input type="text" id="jobtitle" name="jobtitle" value="Skriv in jobbtitel" required>
+
+                <label for="location">Arbetets stad:</label>
+                <input type="text" id="location" name="location" value="Skriv in stad" required>
+
+                <button id="submit">Lägg till jobb</button>
+            </form>
+        </section>
     
 </body>
 </html>
