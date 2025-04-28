@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lägg till</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -14,20 +15,23 @@
             <a href="about.html">Om</a>
         </nav>
         </header>
+        <div class="all">
         <section id="all-form">
+            <h2>Lägg till jobb till CV</h2>
             <form id="form">
                 <label for="companyname">Företag:</label>
-                <input type="text" id="companyname" name="companyname" value="Skriv in företagets namn" required>
+                <input type="text" id="companyname" name="companyname" required>
 
                 <label for="jobtitle">Jobbtitel:</label>
-                <input type="text" id="jobtitle" name="jobtitle" value="Skriv in jobbtitel" required>
+                <input type="text" id="jobtitle" name="jobtitle" required>
 
                 <label for="location">Arbetets stad:</label>
-                <input type="text" id="location" name="location" value="Skriv in stad" required>
+                <input type="text" id="location" name="location" required>
 
                 <button id="submit">Lägg till jobb</button>
             </form>
         </section>
         <script src="../main.js"></script>
+        </div>
 </body>
 </html>
