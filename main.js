@@ -39,10 +39,11 @@ if(addingForm){
             jobtitle: data.get("jobtitle"),
             location: data.get("location")
         };
+        console.log(job);
         fetch("https://backend2-1-vera.onrender.com/resume/add", {
             method: 'POST',
             headers: {
-                'content-type': 'applications/json'
+                'content-type': 'application/json'
             },
             body: JSON.stringify(job)
         })
