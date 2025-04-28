@@ -17,9 +17,17 @@ function getList(){
         console.log(data);
         if(data.length > 0){
             data.forEach(job => {
-                let liEl = document.createElement("li");
-                liEl.textContent = `Företag: ${job.companyname}, Jobbtitel: ${job.jobtitle}, Plats: ${job.location}`;
-                jobList.appendChild(liEl);
+                let secEl = document.createElement("section");
+                let headerEl = document.createElement("h3");
+                let parElFirst = document.createElement("p");
+                let parElSec = document.createElement("p");
+                headerEl.textContent = `Företag: ${job.companyname}`;
+                parElFirst.textContent = `Jobbtitel: ${job.jobtitle}`;
+                parElSec.textContent = `Plats: ${job.location}`;
+                secEl.appendChild(headerEl);
+                secEl.appendChild(parElFirst);
+                secEl.appendChild(parElSec);
+                jobList.appendChild(secEl);
             });
         }
     })
