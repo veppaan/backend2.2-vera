@@ -104,3 +104,17 @@ section{
 #about-text p{
     max-width: 50ch;
 }
+footer{
+    margin-top: 5em;
+    width: 100%;
+}
+footer p{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
+hr{
+    width: 100% ;
+    border: 0.5px solid #404f41;
+}
