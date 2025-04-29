@@ -132,3 +132,7 @@ hr{
     background-color: red;
     cursor: pointer;
 }
+#error-msg{
+    color: red;
+    font-size: 1em;
+}

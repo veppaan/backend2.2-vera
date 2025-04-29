@@ -1,6 +1,7 @@
 //Variabler 
 let jobList = document.getElementById("all-work");
 let addingForm = document.getElementById("form");
+let errorMessage = document.getElementById("error-msg");
 
 //Get all jobs
 if(jobList){
@@ -70,6 +71,8 @@ function deleteJob(id){
 
 //Add job
 if(addingForm){
+    //rensar felmeddelande
+    errorMessage.innerHTML = "";
     addingForm.addEventListener("submit", function (e){
         event.preventDefault();
         const data = new FormData(e.target);
@@ -90,6 +93,7 @@ if(addingForm){
         .then(response => {
             if(!response.ok){
                 return response.json().then(err =>{
+                    errorMessage.innerHTML = "Du måste fylla i företag, jobbtitel och stad!";
                     throw Error(err.message);
                 })
             }
@@ -106,8 +110,6 @@ if(addingForm){
         addingForm.reset();
         })
 }
-function addJob(){
-    
-}
+
 
 
