@@ -71,9 +71,9 @@ function deleteJob(id){
 
 //Add job
 if(addingForm){
-    //rensar felmeddelande
-    errorMessage.innerHTML = "";
     addingForm.addEventListener("submit", function (e){
+        //rensar felmeddelande
+        errorMessage.innerHTML = "";
         event.preventDefault();
         const data = new FormData(e.target);
         //Skapa jobb-objekt från värden
@@ -92,17 +92,18 @@ if(addingForm){
         })
         .then(response => {
             if(!response.ok){
-                return response.json().then(err =>{
+                return response.json()
+                .then(err =>{
                     errorMessage.innerHTML = "Du måste fylla i företag, jobbtitel och stad!";
                     throw Error(err.message);
                 })
             }
+            errorMessage.innerHTML="";
             return response.json();
         })
         .then(data => {
             console.log(data);
-            alert("Jobb tillagd i CV!");
-            
+            alert("Jobb tillagd i CV!");            
         })
         .catch(error => {
             console.error("Fel vid hämtning av att lägga till jobb: " + error);
