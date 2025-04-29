@@ -1,7 +1,7 @@
 {
   "name": "backend2.2-vera",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "public/index.html",
   "scripts": {
     "start": "node main.js"
   },
