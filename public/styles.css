@@ -14,7 +14,7 @@ body{
 }
 .all{
     background-color: rgb(238, 238, 238);
-    padding: 1.5em 8em;
+    padding: 1.5em 6em;
     border-radius: 10px;
     margin-top: 1.5em;
 }
@@ -35,7 +35,8 @@ body{
         margin: 1em;
     }
     #about-text{
-        width: 11em;
+        width: 13em;
+        padding: 0em 3em;
     }
 }
 
@@ -117,4 +118,17 @@ footer p{
 hr{
     width: 100% ;
     border: 0.5px solid #404f41;
+}
+#deleteBtn{
+    color: red;
+    border: 0.5px solid red;
+    background-color: white;
+    border-radius: 8px;
+    width: 6em;
+}
+#deleteBtn:hover {
+    color: white;
+    border: 0.5px solid white;
+    background-color: red;
+    cursor: pointer;
 }

@@ -27,6 +27,7 @@ function getList(){
                 parElFirst.textContent = `Jobbtitel: ${job.jobtitle}`;
                 parElSec.textContent = `Plats: ${job.location}`;
                 deleteBtn.textContent = "Ta bort";
+                deleteBtn.id="deleteBtn";
                 secEl.appendChild(headerEl);
                 secEl.appendChild(parElFirst);
                 secEl.appendChild(parElSec);
@@ -86,22 +87,24 @@ if(addingForm){
             },
             body: JSON.stringify(job)
         })
-    .then(response => {
-        if(!response.ok){
-            throw Error("Något gick fel med förfrågan!");
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        alert("Jobb tillagd i CV!");
-        
-    })
-    .catch(error => {
-        console.error("Fel vid hämtning av att lägga till jobb: " + error);
-    });
-    addingForm.reset();
-    })
+        .then(response => {
+            if(!response.ok){
+                return response.json().then(err =>{
+                    throw Error(err.message);
+                })
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            alert("Jobb tillagd i CV!");
+            
+        })
+        .catch(error => {
+            console.error("Fel vid hämtning av att lägga till jobb: " + error);
+        });
+        addingForm.reset();
+        })
 }
 function addJob(){
     
