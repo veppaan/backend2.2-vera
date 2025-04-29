@@ -24,12 +24,18 @@ body{
         padding: 0em 8em;
         margin: 1em;
     }
+    #about-text{
+        width: 25em;
+    }
 }
 @media screen and (max-width: 799px){
     form{
         width: 9em;
         padding: 0em 1em;
         margin: 1em;
+    }
+    #about-text{
+        width: 11em;
     }
 }
 
@@ -94,4 +100,7 @@ section{
     align-items: center;
     justify-content: center;
     padding: 0;
+}
+#about-text p{
+    max-width: 50ch;
 }
