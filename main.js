@@ -15,6 +15,7 @@ function getList(){
     })
     .then(data => {
         console.log(data);
+        jobList.innerHTML = "";
         if(data.length > 0){
             data.forEach(job => {
                 let secEl = document.createElement("section");
@@ -48,8 +49,7 @@ function deleteJob(id){
         method: 'DELETE',
         headers: {
             'content-type': 'application/json'
-        },
-        body: JSON.stringify(job)
+        }
     })
     .then(response => {
         if(!response.ok){
@@ -60,6 +60,7 @@ function deleteJob(id){
     .then(data => {
         console.log(data);
         alert("Jobb borttaget från CV!");
+        getList();
     })
     .catch(error => {
         console.error("Fel vid borttag av jobb: " + error);
@@ -94,10 +95,12 @@ if(addingForm){
     .then(data => {
         console.log(data);
         alert("Jobb tillagd i CV!");
+        
     })
     .catch(error => {
         console.error("Fel vid hämtning av att lägga till jobb: " + error);
-    })
+    });
+    addingForm.reset();
     })
 }
 function addJob(){
